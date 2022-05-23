@@ -10,3 +10,6 @@ A casual record of the papers read
 
 [Exploiting Language Model Prompts Using Similarity Measures:
 A Case Study on the Word-in-Context Task](https://aclanthology.org/2022.acl-short.36.pdf)
+* 问题：Prompt方法在WiC任务中表现不好
+* 方法：在目标词后加“or [mask]”对比[mask]embedding相似度判断是否为同一语义
+* 有趣的点：相似度判断中，用Spearman相关性比cosine效果好，但去除主方向之后再计算cosine效果就会变好。文中解释是WIC的目标词范围更广，在主方向上的分布更广，受前几个主方向中无关信息的影响更大；
